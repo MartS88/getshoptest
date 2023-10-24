@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const baseUrl = 'http://apilayer.net/api/'
+const baseUrl = 'https://apilayer.net/api/'
 
 export const Api = createApi({
     reducerPath: 'Api',

@@ -131,7 +131,7 @@ const Screen: React.FC = () => {
     // const { data, isError, isLoading } = usePhoneQuery('9312467973')
     const phoneData = data
 
-
+    console.log('phoneD', phoneData)
     const submitHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
 
         if (firstInput.length === 3 && secondInput.length === 9) {
@@ -151,7 +151,7 @@ const Screen: React.FC = () => {
         >
             <div className={s.block}>
 
-                {data?.valid ? (
+                {phoneData?.valid ? (
                     <div className={s.screen_block}>
                         <div className={s.valid_block}>
                             <h2>
