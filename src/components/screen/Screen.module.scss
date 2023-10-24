@@ -1,0 +1,424 @@
+.screen {
+  display: flex;
+
+
+  .block {
+
+    .color_block {
+      padding-top: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .screen_block {
+      padding: 40px 24px 40px 24px;
+      width: 380px;
+      height: 640px;
+      background: #86D3F4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .about {
+        width: 80%;
+        font-size: 0.9rem;
+        line-height: 16.41px;
+        text-align: center;
+        font-family: 'Roboto';
+      }
+
+      .screen_block_title {
+        width: 272px;
+        height: 60px;
+        font-size: 26px;
+        line-height: 30.47px;
+        text-align: center;
+        font-weight: 400;
+        font-family: 'Roboto';
+      }
+
+      span {
+        font-size: 0.9rem;
+        line-height: 16.41px;
+        font-weight: 400;
+        font-family: 'Roboto';
+        text-align: center;
+
+      }
+
+      .inputs_block {
+        width:  250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .error {
+          color: red !important;
+          line-height: 37.5px;
+        }
+
+        .number_input2 {
+          text-align: center;
+          width: 60px;
+          background-color: rgba(135, 206, 244, 0.5);
+          line-height: 37.5px;
+          font-size: 32px;
+          color: black;
+          font-weight: 700;
+          font-family: 'Roboto';
+          outline: none;
+          border: none;
+          transition: all .2s ease;
+        }
+
+        .inputs_span {
+
+          width: 50px;
+          color: black;
+          align-items: center;
+          font-size: 32px;
+          line-height: 37.5px;
+          font-weight: 700;
+          font-family: 'Roboto';
+        }
+
+        .inputs_span2 {
+
+          width: 30px;
+          color: black;
+          align-items: center;
+          font-size: 32px;
+          line-height: 37.5px;
+          position: relative;
+          font-weight: 700;
+          font-family: 'Roboto';
+          top: -1px;
+        }
+
+        .number_input3 {
+
+          width: 150px;
+          background-color: rgba(135, 206, 244, 0.5);
+          line-height: 37.5px;
+          font-size: 32px;
+          color: black;
+          font-weight: 700;
+          font-family: 'Roboto';
+          outline: none;
+          border: none;
+          transition: all .2s ease;
+
+
+          &::placeholder {
+            color: black;
+          }
+        }
+
+      }
+
+
+      button {
+        width: 284px;
+        height: 52px;
+        background: #86D3F4;
+        border: 1px solid #4E4E4E;
+        padding: 16px 19px 16px 19px;
+        gap: 10px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 18.75px;
+        color: #4E4E4E;
+        transition: all .2s ease;
+
+
+        &:hover {
+          cursor: pointer;
+          background: black;
+          color: white;
+        }
+      }
+
+      .buttons_block {
+        width: 284px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+
+        .row {
+          width: 100%;
+          height: 52px;
+          display: flex;
+          gap: 10px;
+        }
+
+        .number {
+
+          padding: 12px 30px 12px 30px;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 18.75px;
+          font-family: 'Roboto';
+          text-align: center;
+          color: #000000;
+          height: 52px;
+          width: 88px;
+          transition: all .2s ease;
+          outline: none;
+
+          &:hover {
+            cursor: pointer;
+            background: black;
+            color: white;
+          }
+
+          &:focus {
+            background: black;
+            color: white;
+          }
+
+        }
+
+        .delete {
+          height: 52px;
+          width: 190px !important;
+          outline: none;
+
+          &:hover {
+            background: black;
+            color: white;
+          }
+
+          &:focus {
+            background: black;
+            color: white;
+          }
+        }
+
+        .zero {
+          height: 52px;
+          width: 88px;
+          outline: none;
+
+          &:hover {
+            cursor: pointer;
+            background: black;
+            color: white;
+          }
+
+          &:focus {
+            background: black;
+            color: white;
+          }
+        }
+      }
+
+      .check_block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .error_title {
+
+          font-family: 'Roboto';
+          font-weight: 500;
+          font-size: 1rem;
+          text-align: center;
+          color: red !important;
+          text-transform: uppercase;
+        }
+
+        input[type="checkbox"] {
+          cursor: pointer;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 40px;
+          height: 40px;
+          outline: none;
+          border: 1px solid #4E4E4E;
+          position: relative;
+
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            outline: none;
+            text-align: center;
+          }
+
+          &:active {
+            outline: 1px solid red;
+           border: none;
+          }
+
+          &:focus {
+            outline: 1px solid red;
+            border: none;
+          }
+        }
+
+        input[type="checkbox"]:checked {
+          &:before {
+            content: "✔";
+            font-size: 2rem;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 35px;
+            color: black;
+          }
+        }
+      }
+
+
+        span {
+        width: 214px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 0.9rem;
+        line-height: 16.41px;
+        color: #565656;
+      }
+
+
+    }
+
+    .submit {
+      outline: none;
+
+
+      &:focus {
+        background: black;
+        color: white
+      }
+
+      &:disabled {
+        background: #86D3F4 !important;
+        color: white;
+        cursor: wait !important;
+      }
+    }
+
+  }
+
+  .background {
+    width: 100%;
+    background: url('../../assets/scale_1200 1.png') no-repeat center;
+    background-size: cover;
+
+    .background_block {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .timer_block {
+        transform: translate(100%, 40%);
+        width: 300px;
+        height: 100%;
+      }
+
+      .close {
+        margin-left: auto !important;
+        width: 200px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        transform: translate(-50px,);
+
+        button {
+          transform: translate(-10px, 50px);
+          width: 88px;
+          height: 52px;
+          color: black;
+          font-size: 1.4rem;
+          background: white;
+          border: 2px;
+          transition: all .2s ease;
+
+          &:hover {
+            cursor: pointer;
+            border: 2px solid whitesmoke;
+          }
+          &:active {
+           background: red;
+            outline: none;
+          }
+
+          &:focus {
+            background: red;
+            outline: none;
+          }
+        }
+
+        .qr_code {
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 10px;
+
+          p {
+            width: 194px;
+            height: 76px;
+            font-family: 'Roboto';
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 18.75px;
+            text-align: right;
+            color: white;
+
+          }
+
+          img {
+            width: 110px;
+          }
+        }
+      }
+    }
+  }
+
+  .valid_block {
+    padding-top: 264px;
+    width: 284px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    h2 {
+      width: 100%;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 37.5px;
+      text-align: center;
+    }
+
+    p {
+
+      font-family: 'Roboto';
+      width: 100%;
+      font-weight: 400;
+      font-size: 0.9rem;
+      line-height: 16.41px;
+      text-align: center;
+    }
+  }
+
+}
+

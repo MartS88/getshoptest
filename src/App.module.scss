@@ -1,0 +1,109 @@
+.App {
+  margin: 0 auto;
+  min-height: 720px;
+
+  .app_block {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+
+    .registration {
+      width: 100%;
+      padding-top: 150px;
+      transform: translate(-100%,5%);
+
+
+      .registration_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background: #86D3F4;
+        padding: 30px 10px 10px 10px;
+        width: 251px;
+        height: 357px;
+        gap: 20px;
+
+        .title {
+          width: 231px;
+          height: 57px;
+          text-align: center;
+          line-height: 18.75px;
+          font-size: 1rem;
+          font-weight: 500;
+          font-family: 'Roboto';
+          text-align: center;
+
+        }
+
+        img {
+          width: 126px;
+        }
+
+        .title2 {
+
+          width: 231px;
+          height: 57px;
+          line-height: 18.75px;
+          font-size: 0.9rem;
+          font-weight: 600;
+          font-family: 'Roboto';
+          text-align: center;
+        }
+
+        button {
+          width: 156px;
+          height: 52px;
+          padding: 16px;
+          background: #000000;
+          gap: 10px;
+          color: #86D3F4;
+          font-family: 'Roboto';
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 18.75px;
+          text-align: center;
+          transition: all .2s ease;
+          border: none;
+
+          &:hover {
+            background: #2c2b2b;;
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.element.slide-enter-active {
+  animation: slideIn 1.5s;
+}
+
+.element.fade-leave-active {
+  animation: fadeOut 1.5s;
+}
