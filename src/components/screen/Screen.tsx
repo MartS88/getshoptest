@@ -6,6 +6,7 @@ import {ColorRing} from 'react-loader-spinner';
 import {usePhoneQuery} from "../../services/Api";
 
 
+
 const Screen: React.FC = () => {
 
     const navigate = useNavigate()
@@ -127,16 +128,21 @@ const Screen: React.FC = () => {
         }
     }
 
-    const {data, isError, isLoading} = usePhoneQuery(`${number}`)
+    const {data, isError, isLoading} = usePhoneQuery(`+7${number}`)
     // const { data, isError, isLoading } = usePhoneQuery('9312467973')
     const phoneData = data
 
-    console.log('phoneD', phoneData)
+
+
+
+
+
     const submitHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
 
         if (firstInput.length === 3 && secondInput.length === 9) {
             const finalNumber = firstInput + secondInput.replace(/\D/g, '');
             setNumber(finalNumber);
+            console.log('phoneData', phoneData)
         }
     }
 
@@ -151,7 +157,7 @@ const Screen: React.FC = () => {
         >
             <div className={s.block}>
 
-                {phoneData?.valid ? (
+                {phoneData?.isValidNumber ? (
                     <div className={s.screen_block}>
                         <div className={s.valid_block}>
                             <h2>
@@ -180,7 +186,7 @@ const Screen: React.FC = () => {
                                 value={firstInput}
                                 onChange={handleFirstInputChange}
                                 maxLength={3}
-                                className={`${s.number_input2} ${phoneData?.line_type === null ? s.error : ''}`}
+                                className={`${s.number_input2} ${phoneData?.isValidNumber === false  ? s.error : ''}`}
                             />
                             <span className={s.inputs_span2}>)</span>
                             <input
@@ -190,7 +196,7 @@ const Screen: React.FC = () => {
                                 onChange={handleSecondInputChange}
                                 maxLength={9}
                                 onKeyUp={handleBackspace}
-                                className={`${s.number_input3} ${phoneData?.line_type === null ? s.error : ''}`}
+                                className={`${s.number_input3} ${phoneData?.isValidNumber === false ? s.error : ''}`}
                             />
                         </div>
                         <span className={s.about}>и с Вами свяжется наш менеджер для дальнейшей консультации</span>
@@ -280,9 +286,11 @@ const Screen: React.FC = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className={s.check_block}>
+                        <div
+                            onClick={() => console.log('inputLeng', secondInput.length)}
+                            className={s.check_block}>
 
-                            {phoneData?.line_type === null ? (
+                            {phoneData?.isValidNumber === false && secondInput.length === 9 ?  (
 
                                 <span className={s.error_title}>Неверно введён номер</span>
                             ) : (

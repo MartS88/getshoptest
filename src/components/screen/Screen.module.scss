@@ -222,6 +222,7 @@
 
       .check_block {
         width: 100%;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -422,3 +423,17 @@
 
 }
 
+
+
+//
+//<div className={s.color_block}>
+//<ColorRing
+// visible={true}
+//height="100"
+//width="100"
+//ariaLabel="blocks-loading"
+//wrapperStyle={{}}
+//wrapperClass="blocks-wrapper"
+//colors={['#609bf4', '#ffffff', 'rgba(14,126,194,0.1)', '#f1f1f6', '#609bf4']}
+///>
+//</div>

@@ -184,6 +184,7 @@
 }
 .screen .block .screen_block .check_block {
   width: 100%;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
