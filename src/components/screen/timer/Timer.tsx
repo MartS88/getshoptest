@@ -4,10 +4,8 @@ import {useNavigate} from "react-router-dom";
 import {AiOutlineClose} from "react-icons/ai";
 
 
-
-
 const  Timer = () => {
-    const [timeLeft, setTimeLeft] = useState(1111110);
+    const [timeLeft, setTimeLeft] = useState(10);
     const [userAction, setUserAction] = useState(false)
     const navigate = useNavigate()
 

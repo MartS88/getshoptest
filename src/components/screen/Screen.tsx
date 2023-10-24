@@ -15,7 +15,6 @@ const Screen: React.FC = () => {
     const firstInputRef = useRef<HTMLInputElement | null>(null);
     const secondInputRef = useRef<HTMLInputElement | null>(null);
     const [noEvents, setNoEvents] = useState<boolean>(false);
-    const [wrongNumber, setWrongNumber] = useState<boolean>(false)
     const [number, setNumber] = useState<string>('')
     const [checked, setChecked] = useState<boolean>(false)
     const activeButton = secondInput.length !== 9
@@ -133,21 +132,13 @@ const Screen: React.FC = () => {
     const phoneData = data
 
 
-
-
-
-
     const submitHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
 
         if (firstInput.length === 3 && secondInput.length === 9) {
             const finalNumber = firstInput + secondInput.replace(/\D/g, '');
             setNumber(finalNumber);
-            console.log('phoneData', phoneData)
         }
     }
-
-
-
 
 
     return (
@@ -156,8 +147,22 @@ const Screen: React.FC = () => {
             className={s.screen}
         >
             <div className={s.block}>
+                {isLoading ? (
+                    <div className={s.screen_block}>
+                        <div className={s.color_block}>
+                            <ColorRing
+                                visible={true}
+                                height="100"
+                                width="100"
+                                ariaLabel="blocks-loading"
+                                wrapperStyle={{}}
+                                wrapperClass="blocks-wrapper"
+                                colors={['#609bf4', '#ffffff', 'rgba(14,126,194,0.1)', '#f1f1f6', '#609bf4']}
+                                />
+                        </div>
+                        </div>
 
-                {phoneData?.isValidNumber ? (
+                ) : phoneData?.isValidNumber ? (
                     <div className={s.screen_block}>
                         <div className={s.valid_block}>
                             <h2>
@@ -339,4 +344,3 @@ const Screen: React.FC = () => {
 };
 
 export default Screen;
-
